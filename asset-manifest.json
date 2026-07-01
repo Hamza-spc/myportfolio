@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.19b22ff5.css",
+    "main.css": "/myportfolio/static/css/main.51ae35c7.css",
     "main.js": "/myportfolio/static/js/main.d52b7907.js",
     "static/css/64.73576579.chunk.css": "/myportfolio/static/css/64.73576579.chunk.css",
     "static/js/64.00e7f1b4.chunk.js": "/myportfolio/static/js/64.00e7f1b4.chunk.js",
@@ -20,7 +20,7 @@
     "static/media/amanus-logo.webp": "/myportfolio/static/media/amanus-logo.d089438463e8ec33561c.webp",
     "index.html": "/myportfolio/index.html",
     "static/media/talksCardBack.svg": "/myportfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.19b22ff5.css.map": "/myportfolio/static/css/main.19b22ff5.css.map",
+    "main.51ae35c7.css.map": "/myportfolio/static/css/main.51ae35c7.css.map",
     "main.d52b7907.js.map": "/myportfolio/static/js/main.d52b7907.js.map",
     "64.73576579.chunk.css.map": "/myportfolio/static/css/64.73576579.chunk.css.map",
     "64.00e7f1b4.chunk.js.map": "/myportfolio/static/js/64.00e7f1b4.chunk.js.map",
@@ -28,7 +28,7 @@
     "769.ce4e0bbc.chunk.js.map": "/myportfolio/static/js/769.ce4e0bbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19b22ff5.css",
+    "static/css/main.51ae35c7.css",
     "static/js/main.d52b7907.js"
   ]
 }
