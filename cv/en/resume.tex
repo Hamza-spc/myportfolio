@@ -1,0 +1,102 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\definecolor{teal}{HTML}{0D9488}
+\definecolor{purple}{HTML}{55198B}
+\definecolor{muted}{HTML}{6B7280}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+\pagestyle{empty}
+\titleformat{\section}{\bfseries\color{purple}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill {\color{muted}\small #2}\\[-2pt]
+  {\color{teal}\textit{#3}}\\[-2pt]
+  \begin{itemize}[leftmargin=12pt, nosep, topsep=2pt]
+    #4
+  \end{itemize}
+  \vspace{4pt}
+}
+
+\begin{document}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  {\LARGE\bfseries\color{purple} Hamza Simou} &
+  \begin{minipage}[t]{0.42\textwidth}\raggedleft\small
+    Marrakech, Morocco\\
+    \href{mailto:hamza.2simou@gmail.com}{hamza.2simou@gmail.com}\\
+    +212 616 161 578\\
+    \href{https://github.com/Hamza-spc}{github.com/Hamza-spc}\\
+    \href{https://www.linkedin.com/in/hamza-simou-88977a25b/}{linkedin.com/in/hamza-simou}
+  \end{minipage}
+\end{tabularx}
+
+\vspace{2pt}
+{\color{teal}\textbf{Software Engineering Student}} \textbar{} Backend \textbar{} DevOps \textbar{} CI/CD
+
+\vspace{4pt}
+\small Final-year student at EMSI Marrakech building scalable full-stack systems and AI-powered applications. \textbf{Currently seeking a PFE internship for 2027} to contribute to challenging backend, DevOps, and full-stack engineering projects.
+
+\section{Experience}
+\role{Software Engineering Intern — Full-Stack \& Odoo ERP}{Jun — Sep 2026}{AMANUS, Marrakech · On-site}{
+  \item Built KickPro: Spring Boot 3 (127+ REST endpoints), Flutter, Kafka, Gemini AI, AWS.
+  \item Developed custom Odoo 17 restaurant module (Sales, Inventory, Purchase).
+  \item Implemented Docker Compose and GitHub Actions CI/CD pipelines.
+}
+\role{Software Engineer Intern}{Jul — Aug 2025}{Sofitel Marrakech — IT Department · On-site}{
+  \item Delivered Lost \& Found app with React, Node.js/Express, and MongoDB.
+  \item Improved API performance $\sim$30\% via caching; JWT RBAC and Nginx.
+}
+\role{Software Developer Intern}{Jul — Aug 2024}{Eureka Digital, Marrakech · On-site}{
+  \item Developed RESTful APIs with Python and Laravel in Agile sprints.
+  \item Contributed to database design, optimization, and production delivery.
+}
+
+\section{Projects}
+\role{KickPro — AI Football Talent Platform}{2026}{Spring Boot, Flutter, Kafka, Gemini AI}{
+  \item Full-stack platform for player discovery; production on AWS (EC2 + RDS).
+}
+\role{Parkingo — Smart Parking Platform}{2026}{\textbf{1st Prize EMSIstes INNOV'26}}{
+  \item Spring Boot API, Flutter, Next.js, Gemini AI, WebRTC, Three.js 3D visualization.
+}
+\role{Archlytics — Java Architecture Analysis}{2026}{CLI + GitHub Action}{
+  \item Dependency graphs, violation detection, health scores, PR diff analysis.
+}
+
+\section{Education}
+\textbf{State Engineering Diploma — Digital Development \& IS} \hfill {\color{muted}\small 2022 — 2027}\\
+{\color{teal}EMSI Marrakech (Bac+5)}
+
+\section{Skills}
+\small
+\textbf{Languages:} Java, Python, JS/TS, C/C++, C\#, PHP \textbar{}
+\textbf{Backend:} Spring Boot, Node.js, FastAPI \textbar{}
+\textbf{DevOps:} Docker, AWS, GitHub Actions\\
+\textbf{Concepts \& Tools:} Git, Agile/Scrum, Microservices, UML, REST APIs, OOP, Design Patterns
+
+\section{Certifications}
+\small
+\begin{itemize}[leftmargin=10pt, nosep, topsep=0pt]
+  \item IELTS C1 Level
+  \item Google — Agile Project Management
+  \item Duke University — Machine Learning
+  \item IBM — Cloud Computing
+  \item HKUST — Software Design \& PM
+  \item EPFL — OOP (C++)
+  \item Cisco — Networking Basics
+  \item +10 additional credentials
+\end{itemize}
+
+\section{Languages}
+\small Arabic (native), English (C1 IELTS), French (professional)
+
+\end{document}

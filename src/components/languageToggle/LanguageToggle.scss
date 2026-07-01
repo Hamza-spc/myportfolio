@@ -1,0 +1,57 @@
+@import "../../_globalColor";
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.language-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(85, 25, 139, 0.25);
+  background: transparent;
+  color: $textColor;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-flag {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.language-toggle-btn:hover {
+  background-color: $headerHoverBG;
+}
+
+.language-toggle-btn-active {
+  background-color: $buttonColor;
+  border-color: $buttonColor;
+  color: $textColorDark;
+}
+
+.dark-menu .language-toggle-btn {
+  color: $textColorDark;
+  border-color: rgba(179, 136, 255, 0.35);
+}
+
+.dark-menu .language-toggle-btn:hover {
+  background-color: $buttonColor;
+}
+
+.dark-menu .language-toggle-btn-active {
+  background-color: $buttonColor;
+  border-color: $buttonColor;
+  color: $textColorDark;
+}

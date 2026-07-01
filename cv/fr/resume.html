@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hamza Simou — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css"
+    />
+    <style>
+      :root {
+        --teal: #0d9488;
+        --teal-dark: #0f766e;
+        --purple: #55198b;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --sidebar: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 10.25pt;
+        line-height: 1.42;
+        color: var(--text);
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        display: grid;
+        grid-template-columns: 70mm 1fr;
+      }
+
+      .sidebar {
+        background: var(--sidebar);
+        border-right: 2px solid var(--teal);
+        padding: 13mm 9mm;
+      }
+
+      .photo {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--teal);
+        display: block;
+        margin: 0 auto 10px;
+      }
+
+      .sidebar h1 {
+        font-size: 16pt;
+        color: var(--purple);
+        text-align: center;
+        margin-bottom: 4px;
+      }
+
+      .sidebar .tagline {
+        text-align: center;
+        font-size: 9pt;
+        color: var(--teal-dark);
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      .side-block {
+        margin-bottom: 12px;
+      }
+
+      .side-block h2 {
+        font-size: 9pt;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--teal);
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 3px;
+        margin-bottom: 7px;
+      }
+
+      .side-block p,
+      .side-block li,
+      .side-block a {
+        font-size: 9pt;
+        color: var(--text);
+        word-break: break-word;
+      }
+
+      .side-block ul {
+        list-style: none;
+      }
+
+      .side-block li {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+      }
+
+      .contact-icon {
+        color: var(--teal);
+        width: 12px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        font-size: 8.5pt;
+      }
+
+      .side-block a {
+        color: var(--teal-dark);
+        text-decoration: none;
+      }
+
+      .skill-line {
+        margin-bottom: 5px;
+      }
+
+      .skill-line strong {
+        color: var(--purple);
+        font-size: 8.5pt;
+      }
+
+      .main {
+        padding: 12mm 11mm 11mm;
+      }
+
+      .summary {
+        font-size: 10pt;
+        color: #374151;
+        margin-bottom: 12px;
+        padding-bottom: 9px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section {
+        margin-bottom: 11px;
+      }
+
+      section h2 {
+        font-size: 10pt;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--purple);
+        margin-bottom: 7px;
+      }
+
+      .entry {
+        margin-bottom: 9px;
+      }
+
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        align-items: baseline;
+      }
+
+      .entry-title {
+        font-weight: 700;
+        font-size: 10.25pt;
+      }
+
+      .entry-org {
+        color: var(--teal-dark);
+        font-weight: 600;
+        font-size: 9.25pt;
+      }
+
+      .entry-date {
+        font-size: 8.75pt;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .entry ul {
+        margin-top: 4px;
+        padding-left: 15px;
+      }
+
+      .entry li {
+        margin-bottom: 3px;
+        font-size: 9.5pt;
+      }
+
+      .award {
+        font-size: 9pt;
+        color: var(--teal-dark);
+        font-weight: 600;
+      }
+
+      .cert-list li {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 8.75pt;
+        line-height: 1.35;
+      }
+
+      .onsite {
+        font-size: 8.5pt;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="sidebar">
+        <img
+          class="photo"
+          src="../../src/assets/images/my-photo.jpeg"
+          alt="Hamza Simou"
+        />
+        <h1>Hamza Simou</h1>
+        <p class="tagline">Étudiant Ingénieur Logiciel</p>
+
+        <div class="side-block">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>Marrakech, Maroc</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:hamza.2simou@gmail.com">hamza.2simou@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone contact-icon"></i>
+              <span>+212 616 161 578</span>
+            </li>
+            <li>
+              <i class="fab fa-github contact-icon"></i>
+              <a href="https://github.com/Hamza-spc">github.com/Hamza-spc</a>
+            </li>
+            <li>
+              <i class="fab fa-linkedin-in contact-icon"></i>
+              <a href="https://www.linkedin.com/in/hamza-simou-88977a25b/"
+                >linkedin.com/in/hamza-simou</a
+              >
+            </li>
+            <li>
+              <i class="fas fa-globe contact-icon"></i>
+              <a href="https://hamza-spc.github.io/myportfolio/">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="side-block">
+          <h2>Compétences</h2>
+          <p class="skill-line"><strong>Langages :</strong> Java, Python, JS/TS, C/C++, C#, PHP</p>
+          <p class="skill-line"><strong>Backend :</strong> Spring Boot, Node.js, FastAPI, Laravel</p>
+          <p class="skill-line"><strong>Frontend :</strong> React, Next.js, Flutter, Tailwind</p>
+          <p class="skill-line"><strong>Bases de données :</strong> PostgreSQL, MySQL, MongoDB</p>
+          <p class="skill-line"><strong>DevOps :</strong> Docker, AWS, GitHub Actions, CI/CD</p>
+          <p class="skill-line">
+            <strong>Concepts & Outils :</strong> Git, Agile/Scrum, Microservices, UML, API REST,
+            POO, Design Patterns
+          </p>
+        </div>
+
+        <div class="side-block">
+          <h2>Langues</h2>
+          <ul>
+            <li>Arabe — Maternelle</li>
+            <li>Anglais — C1 (IELTS)</li>
+            <li>Français — Professionnel</li>
+          </ul>
+        </div>
+
+        <div class="side-block">
+          <h2>Certifications</h2>
+          <ul class="cert-list">
+            <li>IELTS C1</li>
+            <li>Google — Agile Project Management</li>
+            <li>Duke University — Machine Learning</li>
+            <li>IBM — Cloud Computing</li>
+            <li>HKUST — Software Design & PM</li>
+            <li>EPFL — POO (C++)</li>
+            <li>Cisco — Networking Basics</li>
+            <li>+10 certifications supplémentaires</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="main">
+        <p class="summary">
+          Étudiant en dernière année d'ingénierie logicielle à l'EMSI Marrakech, spécialisé en
+          <strong>développement backend, DevOps et CI/CD</strong>. Expérience dans la conception
+          de systèmes full-stack et d'applications IA — APIs REST scalables, backends
+          événementiels et déploiements cloud sur AWS.
+          <strong>
+            Actuellement à la recherche d'un stage PFE pour 2027 afin de contribuer à des
+            projets ambitieux en backend, DevOps et ingénierie full-stack.
+          </strong>
+        </p>
+
+        <section>
+          <h2>Expérience</h2>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div>
+                <div class="entry-title">Stagiaire Ingénieur Logiciel — Full-Stack & Odoo ERP</div>
+                <div class="entry-org">
+                  AMANUS · Marrakech <span class="onsite">· Sur site</span>
+                </div>
+              </div>
+              <div class="entry-date">Juin — Sep 2026</div>
+            </div>
+            <ul>
+              <li>KickPro : Spring Boot 3 (127+ endpoints REST), Flutter, Kafka, Gemini AI, déploiement AWS.</li>
+              <li>Module Odoo 17 restaurant intégré aux flux Ventes, Stock et Achats.</li>
+              <li>Pipelines CI/CD avec Docker Compose et GitHub Actions.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div>
+                <div class="entry-title">Stagiaire Ingénieur Logiciel</div>
+                <div class="entry-org">
+                  Sofitel Marrakech — Département IT <span class="onsite">· Sur site</span>
+                </div>
+              </div>
+              <div class="entry-date">Juil. — Août 2025</div>
+            </div>
+            <ul>
+              <li>Application Lost & Found : React, Node.js/Express, MongoDB.</li>
+              <li>Performance API +30% (cache), sécurité JWT RBAC et Nginx.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div>
+                <div class="entry-title">Stagiaire Développeur Logiciel</div>
+                <div class="entry-org">
+                  Eureka Digital · Marrakech <span class="onsite">· Sur site</span>
+                </div>
+              </div>
+              <div class="entry-date">Juil. — Août 2024</div>
+            </div>
+            <ul>
+              <li>APIs REST avec Python et Laravel en méthodologie Agile.</li>
+              <li>Conception et optimisation de bases de données.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Projets</h2>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div class="entry-title">KickPro — Plateforme IA de Talents Football</div>
+              <div class="entry-date">2026</div>
+            </div>
+            <ul>
+              <li>Plateforme full-stack reliant les joueurs aux scouts ; Spring Boot, Flutter, Kafka, Gemini AI.</li>
+              <li>Déploiement production AWS ; 32 tests JUnit, CI/CD GitHub Actions.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div>
+                <div class="entry-title">Parkingo — Plateforme de Parking Intelligent</div>
+                <div class="award">🏆 1er Prix · EMSIstes INNOV'26</div>
+              </div>
+              <div class="entry-date">2026</div>
+            </div>
+            <ul>
+              <li>API Spring Boot, app Flutter, dashboards Next.js, IA Gemini, WebRTC, carte 3D.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div class="entry-title">Archlytics — Analyse d'Architecture Java</div>
+              <div class="entry-date">2026</div>
+            </div>
+            <ul>
+              <li>CLI + GitHub Action : graphes de dépendances, violations, scores, analyse de PR.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Formation</h2>
+          <div class="entry">
+            <div class="entry-header">
+              <div>
+                <div class="entry-title">Diplôme d'Ingénieur d'État — Développement Digital & SI</div>
+                <div class="entry-org">EMSI Marrakech (Bac+5)</div>
+              </div>
+              <div class="entry-date">2022 — 2027</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

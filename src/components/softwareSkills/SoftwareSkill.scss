@@ -15,17 +15,90 @@
   margin-bottom: 20px;
 }
 
-.software-skill-inline > i {
-  color: $subTitle;
+.software-skill-inline > i.devicon-icon,
+.software-skill-inline > i.fa-icon {
+  display: inline-block;
+  line-height: 1;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.software-skill-inline > i:hover {
-  color: $skillsColor;
+.software-skill-inline > i.devicon-icon:hover,
+.software-skill-inline > i.fa-icon:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
 }
+
 .software-skill-inline > p {
   color: $subTitle;
   font-size: 10px;
 }
-.software-skill-inline > i:hover ~ p {
+
+.software-skill-inline > i.devicon-icon:hover ~ p,
+.software-skill-inline > i.fa-icon:hover ~ p {
   color: $skillsColor;
+}
+
+/* Brand colors — must beat .dark-mode { color: white } inheritance */
+.software-skills-main-div {
+  .devicon-java-plain.colored {
+    color: #ea2d2e;
+  }
+
+  .devicon-python-plain.colored {
+    color: #ffd845;
+  }
+
+  .devicon-javascript-plain.colored {
+    color: #f0db4f;
+  }
+
+  .devicon-typescript-plain.colored {
+    color: #007acc;
+  }
+
+  .devicon-react-original.colored {
+    color: #61dafb;
+  }
+
+  .devicon-nodejs-plain.colored {
+    color: #83cd29;
+  }
+
+  .devicon-php-plain.colored {
+    color: #6181b6;
+  }
+
+  .devicon-html5-plain.colored {
+    color: #e54d26;
+  }
+
+  .devicon-css3-plain.colored {
+    color: #3d8fc6;
+  }
+
+  .devicon-docker-plain.colored {
+    color: #019bc6;
+  }
+
+  .devicon-postgresql-plain.colored {
+    color: #336791;
+  }
+
+  .devicon-git-plain.colored {
+    color: #f34f29;
+  }
+
+  .devicon-linux-plain.colored {
+    color: #000000;
+  }
+
+  .fab.fa-aws {
+    color: #ff9900;
+  }
+}
+
+.dark-mode .software-skills-main-div {
+  .devicon-linux-plain.colored {
+    color: #ffffff;
+  }
 }

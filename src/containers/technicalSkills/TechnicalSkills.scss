@@ -1,0 +1,102 @@
+@import "../../_globalColor";
+
+.technical-skills-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: $titleColor;
+}
+
+.technical-skills-subtitle {
+  text-transform: uppercase;
+  margin: 0.5rem 0 1rem;
+}
+
+.technical-skills-focus {
+  font-size: 1.05rem;
+  color: $skillsColor;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.technical-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.technical-skill-category {
+  border-radius: 10px;
+  padding: 1.25rem;
+  border: 1px solid $lightBorder1;
+  transition: all 0.25s ease;
+}
+
+.technical-skill-category-light {
+  background-color: $lightBackground2;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+
+  &:hover {
+    box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  }
+}
+
+.technical-skill-category-dark {
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+
+  &:hover {
+    box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+  }
+}
+
+.technical-skill-category-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $skillsColor;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.technical-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technical-skill-tag {
+  background: rgba(13, 148, 136, 0.1);
+  color: $titleColor;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(13, 148, 136, 0.25);
+}
+
+.dark-mode .technical-skill-tag {
+  color: $textColorDark;
+  background: rgba(45, 212, 191, 0.12);
+  border-color: rgba(45, 212, 191, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .technical-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .technical-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-skills-heading {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .technical-skills-subtitle,
+  .technical-skills-focus {
+    text-align: center;
+  }
+}

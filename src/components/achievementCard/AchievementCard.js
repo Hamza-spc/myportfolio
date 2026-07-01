@@ -12,21 +12,35 @@ export default function AchievementCard({cardInfo, isDark}) {
   }
 
   return (
-    <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
-      <div className="certificate-image-div">
-        <img
-          src={cardInfo.image}
-          alt={cardInfo.imageAlt || "Card Thumbnail"}
-          className="card-image"
-        ></img>
-      </div>
+    <div
+      className={
+        isDark
+          ? `dark-mode certificate-card${cardInfo.image ? "" : " certificate-card-no-image"}`
+          : `certificate-card${cardInfo.image ? "" : " certificate-card-no-image"}`
+      }
+    >
+      {cardInfo.image ? (
+        <div className="certificate-image-div">
+          <img
+            src={cardInfo.image}
+            alt={cardInfo.imageAlt || "Card Thumbnail"}
+            className="card-image"
+          ></img>
+        </div>
+      ) : null}
       <div className="certificate-detail-div">
-        <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
-          {cardInfo.title}
-        </h5>
-        <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
-          {cardInfo.description}
-        </p>
+        <h5 className="cert-title">{cardInfo.title}</h5>
+        {cardInfo.issuer ? (
+          <p className="cert-issuer">{cardInfo.issuer}</p>
+        ) : null}
+        {cardInfo.date ? (
+          <p className="cert-date">Issued {cardInfo.date}</p>
+        ) : cardInfo.description ? (
+          <p className="card-subtitle">{cardInfo.description}</p>
+        ) : null}
+        {cardInfo.skills ? (
+          <p className="cert-skills">Skills: {cardInfo.skills}</p>
+        ) : null}
       </div>
       <div className="certificate-card-footer">
         {cardInfo.footer.map((v, i) => {

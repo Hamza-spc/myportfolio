@@ -1,0 +1,11 @@
+{
+  "name": "hamza-cv",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-pdf.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.2.0"
+  }
+}

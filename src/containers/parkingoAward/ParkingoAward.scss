@@ -1,0 +1,94 @@
+@import "../../_globalColor";
+
+.parkingo-award-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.parkingo-award-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: $titleColor;
+}
+
+.parkingo-award-subtitle {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.parkingo-award-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: $cardSubtitle;
+  margin-bottom: 1.5rem;
+}
+
+.parkingo-award-text {
+  flex: 1;
+}
+
+.parkingo-award-image-div {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parkingo-award-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: $lightBoxShadowDark 0px 15px 35px -15px;
+}
+
+.parkingo-award-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.parkingo-award-tag {
+  background: $buttonColor;
+  color: $lightBackground3;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    background: $buttonHover;
+  }
+}
+
+.dark-mode.parkingo-award-desc {
+  color: $textColorDark;
+}
+
+@media (max-width: 900px) {
+  .parkingo-award-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .parkingo-award-image-div {
+    flex: none;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .parkingo-award-footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .parkingo-award-heading {
+    font-size: 1.75rem;
+  }
+}

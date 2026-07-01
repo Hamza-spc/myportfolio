@@ -1,8 +1,11 @@
 import React from "react";
 import "./SoftwareSkill.scss";
-import {skillsSection} from "../../portfolio";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function SoftwareSkill() {
+  const {portfolio} = usePortfolio();
+  const {skillsSection} = portfolio;
+
   return (
     <div>
       <div className="software-skills-main-div">
@@ -14,7 +17,15 @@ export default function SoftwareSkill() {
                 className="software-skill-inline"
                 name={skills.skillName}
               >
-                <i className={skills.fontAwesomeClassname}></i>
+                {skills.deviconClassname ? (
+                  <i
+                    className={`${skills.deviconClassname} devicon-icon`}
+                  ></i>
+                ) : (
+                  <i
+                    className={`${skills.fontAwesomeClassname} fa-icon`}
+                  ></i>
+                )}
                 <p>{skills.skillName}</p>
               </li>
             );

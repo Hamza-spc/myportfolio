@@ -2,18 +2,21 @@ import React, {useContext} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
+import {resumeFiles} from "../../utils/resumeFiles";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const {portfolio, ui, language} = usePortfolio();
+  const {greeting} = portfolio;
+
   if (!greeting.displayGreeting) {
     return null;
   }
+
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
@@ -39,22 +42,26 @@ export default function Greeting() {
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <Button text={ui.buttons.contact} href="#contact" />
                 {greeting.resumeLink && (
                   <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
+                    href={resumeFiles[language]}
+                    download={ui.resumeDownloadName}
                     className="download-link-button"
                   >
-                    <Button text="Download my resume" />
+                    <Button text={ui.buttons.downloadResume} />
                   </a>
                 )}
               </div>
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
+            {greeting.profileImage ? (
+              <img
+                alt={greeting.username}
+                src={greeting.profileImage}
+                className="greeting-profile-photo"
+              />
             ) : (
               <img
                 alt="man sitting on table"

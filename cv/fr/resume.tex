@@ -1,0 +1,103 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\definecolor{teal}{HTML}{0D9488}
+\definecolor{purple}{HTML}{55198B}
+\definecolor{muted}{HTML}{6B7280}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+\pagestyle{empty}
+\titleformat{\section}{\bfseries\color{purple}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill {\color{muted}\small #2}\\[-2pt]
+  {\color{teal}\textit{#3}}\\[-2pt]
+  \begin{itemize}[leftmargin=12pt, nosep, topsep=2pt]
+    #4
+  \end{itemize}
+  \vspace{4pt}
+}
+
+\begin{document}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  {\LARGE\bfseries\color{purple} Hamza Simou} &
+  \begin{minipage}[t]{0.42\textwidth}\raggedleft\small
+    Marrakech, Maroc\\
+    \href{mailto:hamza.2simou@gmail.com}{hamza.2simou@gmail.com}\\
+    +212 616 161 578\\
+    \href{https://github.com/Hamza-spc}{github.com/Hamza-spc}\\
+    \href{https://www.linkedin.com/in/hamza-simou-88977a25b/}{linkedin.com/in/hamza-simou}
+  \end{minipage}
+\end{tabularx}
+
+\vspace{2pt}
+{\color{teal}\textbf{Étudiant Ingénieur Logiciel}} \textbar{} Backend \textbar{} DevOps \textbar{} CI/CD
+
+\vspace{4pt}
+\small Étudiant en dernière année à l'EMSI Marrakech. \textbf{Actuellement à la recherche d'un stage PFE pour 2027} afin de contribuer à des projets ambitieux en backend, DevOps et full-stack.
+
+\section{Expérience}
+\role{Stagiaire Ingénieur Logiciel — Full-Stack \& Odoo ERP}{Juin — Sep 2026}{AMANUS, Marrakech · Sur site}{
+  \item KickPro : Spring Boot 3 (127+ endpoints), Flutter, Kafka, Gemini AI, AWS.
+  \item Module Odoo 17 restaurant (Ventes, Stock, Achats).
+  \item CI/CD avec Docker Compose et GitHub Actions.
+}
+\role{Stagiaire Ingénieur Logiciel}{Juil. — Août 2025}{Sofitel Marrakech — Département IT · Sur site}{
+  \item Application Lost \& Found : React, Node.js/Express, MongoDB.
+  \item Performance API +30\% (cache), JWT RBAC et Nginx.
+}
+\role{Stagiaire Développeur Logiciel}{Juil. — Août 2024}{Eureka Digital, Marrakech · Sur site}{
+  \item APIs REST Python et Laravel en Agile.
+  \item Conception et optimisation de bases de données.
+}
+
+\section{Projets}
+\role{KickPro — Plateforme IA Talents Football}{2026}{Spring Boot, Flutter, Kafka, Gemini AI}{
+  \item Plateforme full-stack reliant les joueurs aux scouts ; déploiement production AWS (EC2 + RDS).
+}
+\role{Parkingo — Parking Intelligent}{2026}{\textbf{1er Prix EMSIstes INNOV'26}}{
+  \item API Spring Boot, Flutter, Next.js, IA Gemini, WebRTC, carte 3D.
+}
+\role{Archlytics — Analyse d'Architecture Java}{2026}{CLI + GitHub Action}{
+  \item Graphes de dépendances, violations, scores, analyse de PR.
+}
+
+\section{Formation}
+\textbf{Diplôme d'Ingénieur d'État — Développement Digital \& SI} \hfill {\color{muted}\small 2022 — 2027}\\
+{\color{teal}EMSI Marrakech (Bac+5)}
+
+\section{Compétences}
+\small
+\textbf{Langages :} Java, Python, JS/TS, C/C++, C\#, PHP \textbar{}
+\textbf{Backend :} Spring Boot, Node.js, FastAPI \textbar{}
+\textbf{DevOps :} Docker, AWS, GitHub Actions\\
+\textbf{Concepts \& Outils :} Git, Agile/Scrum, Microservices, UML, API REST, POO, Design Patterns
+
+\section{Certifications}
+\small
+\begin{itemize}[leftmargin=10pt, nosep, topsep=0pt]
+  \item IELTS C1
+  \item Google — Agile Project Management
+  \item Duke University — Machine Learning
+  \item IBM — Cloud Computing
+  \item HKUST — Software Design \& PM
+  \item EPFL — POO (C++)
+  \item Cisco — Networking Basics
+  \item +10 certifications supplémentaires
+\end{itemize}
+
+\section{Langues}
+\small Arabe (maternelle), Anglais (C1 IELTS), Français (professionnel)
+
+\end{document}

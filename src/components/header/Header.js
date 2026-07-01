@@ -2,32 +2,61 @@ import React, {useContext} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import LanguageToggle from "../languageToggle/LanguageToggle";
 import StyleContext from "../../contexts/StyleContext";
-import {
-  greeting,
-  workExperiences,
-  skillsSection,
-  openSource,
-  blogSection,
-  talkSection,
-  achievementSection,
-  resumeSection
-} from "../../portfolio";
+import {usePortfolio} from "../../hooks/usePortfolio";
+import {resumeFiles} from "../../utils/resumeFiles";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
-  const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
-  const viewSkills = skillsSection.display;
-  const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
-  const viewResume = resumeSection.display;
+  const {portfolio, ui, language} = usePortfolio();
+  const {
+    greeting,
+    skillsSection,
+    parkingoAwardSection,
+    technicalSkillsSection,
+    educationInfo,
+    workExperiences,
+    bigProjects,
+    achievementSection,
+    resumeSection
+  } = portfolio;
+
+  const navItems = [
+    {label: ui.nav.home, href: "#greeting", show: greeting.displayGreeting},
+    {label: ui.nav.whatIDo, href: "#skills", show: skillsSection.display},
+    {label: ui.nav.award, href: "#award", show: parkingoAwardSection.display},
+    {
+      label: ui.nav.skills,
+      href: "#technical-skills",
+      show: technicalSkillsSection.display
+    },
+    {label: ui.nav.education, href: "#education", show: educationInfo.display},
+    {
+      label: ui.nav.experience,
+      href: "#experience",
+      show: workExperiences.display
+    },
+    {label: ui.nav.projects, href: "#projects", show: bigProjects.display},
+    {
+      label: ui.nav.certifications,
+      href: "#achievements",
+      show: achievementSection.display
+    },
+    {
+      label: ui.nav.resume,
+      href: resumeFiles[language],
+      download: ui.resumeDownloadName,
+      show: resumeSection.display,
+      isDownload: true
+    },
+    {label: ui.nav.contact, href: "#contact", show: true}
+  ];
 
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+        <a href="#greeting" className="logo">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -41,43 +70,26 @@ function Header() {
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )}
-          {viewResume && (
-            <li>
-              <a href="#resume">Resume</a>
-            </li>
+          {navItems.map(
+            item =>
+              item.show && (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    {...(item.isDownload
+                      ? {download: item.download}
+                      : {})}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              )
           )}
           <li>
-            <a href="#contact">Contact Me</a>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
+              <LanguageToggle />
+            </a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -90,4 +102,5 @@ function Header() {
     </Headroom>
   );
 }
+
 export default Header;

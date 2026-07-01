@@ -48,14 +48,34 @@
   color: $textColor !important;
 }
 
+.dark-mode.greeting-text {
+  color: $textColorDark !important;
+}
+
 .greeting-text-p {
   font-size: 30px;
   line-height: 40px;
 }
 
+.greeting-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
+}
+
+.greeting-profile-photo {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid $buttonColor;
+  box-shadow: $lightBoxShadowDark 0px 15px 35px -15px;
 }
 
 .wave-emoji {
@@ -116,7 +136,14 @@
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+
+  .greeting-profile-photo {
+    max-width: 260px;
   }
 }
 

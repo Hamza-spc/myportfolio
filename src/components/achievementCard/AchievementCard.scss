@@ -12,6 +12,57 @@
   font-weight: 700;
   margin: 15px 0 0 0;
 }
+
+.cert-title {
+  color: #55198b;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
+.cert-issuer {
+  color: $skillsColor;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+}
+
+.cert-date {
+  color: $subTitle;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.cert-skills {
+  color: $cardSubtitle;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 0;
+  font-style: italic;
+}
+
+.dark-mode.certificate-card {
+  .cert-title {
+    color: #b388ff;
+  }
+
+  .cert-issuer {
+    color: $progressBarSpanBG;
+  }
+
+  .cert-date {
+    color: $talkCardSubTitle;
+  }
+
+  .cert-skills {
+    color: $talkCardSubTitle;
+  }
+}
+
 .card-subtitle {
   color: $cardSubtitle;
   font-size: 1.063rem;
@@ -26,6 +77,11 @@
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.certificate-card-no-image {
+  .certificate-detail-div {
+    margin-top: 0;
+  }
 }
 .certificate-detail-div {
   text-align: center;
