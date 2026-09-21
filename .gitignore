@@ -28,3 +28,6 @@ public/blogs.json
 
 # cv build
 cv/node_modules
+
+# private ATS CVs (not for portfolio or GitHub)
+cv-ats/

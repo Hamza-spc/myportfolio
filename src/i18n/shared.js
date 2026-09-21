@@ -66,18 +66,18 @@ export const softwareSkills = [
     skillName: "TypeScript",
     deviconClassname: "devicon-typescript-plain colored"
   },
+  {skillName: "Spring", deviconClassname: "devicon-spring-plain colored"},
+  {skillName: "Angular", deviconClassname: "devicon-angularjs-plain colored"},
   {skillName: "React", deviconClassname: "devicon-react-original colored"},
   {skillName: "Node.js", deviconClassname: "devicon-nodejs-plain colored"},
-  {skillName: "PHP", deviconClassname: "devicon-php-plain colored"},
-  {skillName: "HTML5", deviconClassname: "devicon-html5-plain colored"},
-  {skillName: "CSS3", deviconClassname: "devicon-css3-plain colored"},
   {skillName: "Docker", deviconClassname: "devicon-docker-plain colored"},
   {
-    skillName: "AWS",
-    fontAwesomeClassname: "fab fa-aws"
+    skillName: "Kubernetes",
+    deviconClassname: "devicon-kubernetes-plain colored"
   },
+  {skillName: "AWS", fontAwesomeClassname: "fab fa-aws"},
   {
-    skillName: "Database",
+    skillName: "PostgreSQL",
     deviconClassname: "devicon-postgresql-plain colored"
   },
   {skillName: "Git", deviconClassname: "devicon-git-plain colored"},
@@ -87,101 +87,55 @@ export const softwareSkills = [
 export const technicalSkillCategories = [
   {
     nameKey: "languages",
-    skills: [
-      "Java",
-      "C",
-      "C++",
-      "C#",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "PHP"
-    ]
+    skills: ["Java (17/21)", "Python", "JavaScript", "TypeScript"]
   },
   {
     nameKey: "backend",
     skills: [
       "Spring Boot",
       "Spring Security",
-      "Spring Data",
-      "Spring Cloud",
-      "Spring AI",
-      "Node.js",
-      "Express.js",
-      "Laravel",
-      "FastAPI",
-      ".NET"
+      "Spring Data JPA",
+      "REST APIs",
+      "Microservices",
+      "Node.js (Express.js)"
     ]
   },
   {
     nameKey: "frontend",
-    skills: [
-      "React.js",
-      "Next.js",
-      "Dart / Flutter",
-      "JavaFX",
-      "Tailwind CSS",
-      "HTML5",
-      "CSS3"
-    ]
+    skills: ["Angular 21", "Flutter", "React", "Next.js"]
   },
   {
     nameKey: "databases",
-    skills: [
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB",
-      "Oracle",
-      "Microsoft SQL Server"
-    ]
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQL Server"]
   },
   {
     nameKey: "devops",
-    skills: ["Docker", "CI/CD", "AWS", "GitHub Actions", "Vercel"]
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "AWS",
+      "GitHub Actions",
+      "CI/CD",
+      "Linux"
+    ]
+  },
+  {
+    nameKey: "security",
+    skills: ["Keycloak", "OAuth2", "JWT"]
   },
   {
     nameKey: "tools",
-    skills: [
-      "Git",
-      "Linux",
-      "UML",
-      "Shell Scripting",
-      "Unit Testing",
-      "Arduino"
-    ]
-  },
-  {
-    nameKey: "networking",
-    skills: [
-      "TCP/IP",
-      "DNS & DHCP",
-      "HTTP/HTTPS",
-      "REST APIs",
-      "WebSockets",
-      "OAuth 2.0",
-      "VPN",
-      "LAN/WAN",
-      "Wireless Access",
-      "Network Security"
-    ]
+    skills: ["Git", "GitHub", "GitLab", "Maven", "Jira", "Nexus"]
   },
   {
     nameKey: "concepts",
-    skills: [
-      "Microservices",
-      "Object-Oriented Programming (OOP)",
-      "Agile Methodologies",
-      "Full-Stack Development",
-      "DevOps",
-      "Machine Learning",
-      "Deep Learning",
-      "Data Analysis"
-    ]
+    skills: ["Agile/Scrum", "UML", "OOP", "Design Patterns"]
   }
 ];
 
 export const assets = {
-  profileImage: require("../assets/images/my-photo.jpeg"),
+  profileImage: require("../assets/images/myphoto.png"),
   emsiLogo: require("../assets/images/emsi-logo.png"),
   parkingoAward: require("../assets/images/parkingo-award.jpeg"),
   amanusLogo: require("../assets/images/amanus-logo.webp"),

@@ -15,19 +15,39 @@
   color: $subTitle;
 }
 
-.achievement-cards-featured {
-  grid-template-columns: repeat(5, 1fr);
+.achievement-main-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.achievement-cards-expanded {
-  margin-top: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.achievement-cards-div {
+  display: grid;
+  gap: 1.75rem;
+  row-gap: 1.75rem;
+  column-gap: 1.75rem;
+}
+
+.achievement-cards-div.achievement-cards-featured {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-cards-div.achievement-cards-expanded {
+  margin-top: 0.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.75rem;
 }
 
 .achievement-toggle-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 0;
+  padding-top: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .achievement-toggle-btn {
@@ -65,9 +85,23 @@
 }
 
 /* Media Query */
-@media (max-width: 1200px) {
-  .achievement-cards-featured {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 1400px) {
+  .achievement-cards-div.achievement-cards-featured {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .achievement-cards-div.achievement-cards-expanded {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .achievement-cards-div.achievement-cards-featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .achievement-cards-div.achievement-cards-expanded {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -88,7 +122,12 @@
     text-align: center;
   }
 
-  .achievement-cards-featured {
+  .achievement-cards-div.achievement-cards-featured {
     grid-template-columns: 1fr;
+  }
+
+  .achievement-cards-div.achievement-cards-expanded {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 }

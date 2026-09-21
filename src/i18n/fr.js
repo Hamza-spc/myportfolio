@@ -21,7 +21,7 @@ const greeting = {
   username: "Hamza Simou",
   title: "Bonjour, je suis Hamza",
   subTitle: emoji(
-    "Étudiant en dernière année d'ingénierie logicielle à l'EMSI Marrakech, spécialisé dans la conception de systèmes full-stack scalables et d'applications IA — des apps mobiles aux architectures backend distribuées."
+    "Étudiant en dernière année d'ingénierie logicielle à l'EMSI Marrakech, axé backend, DevOps et CI/CD — avec une expérience concrète sur des systèmes full-stack et IA en production. En recherche d'un stage PFE pour 2027."
   ),
   profileImage: assets.profileImage,
   resumeLink: true,
@@ -34,13 +34,13 @@ const skillsSection = {
     "INGÉNIEUR LOGICIEL ORIENTÉ BACKEND AVEC UNE FORTE EXPÉRIENCE DEVOPS & FULL-STACK",
   skills: [
     emoji(
-      "⚡ Concevoir et développer des API REST scalables et des backends microservices avec Spring Boot, Node.js et FastAPI"
+      "⚡ Concevoir et développer des API REST scalables et des backends microservices avec Spring Boot, Spring Security et Node.js"
     ),
     emoji(
-      "⚡ Déployer des systèmes en production avec Docker, pipelines CI/CD, AWS et tests automatisés"
+      "⚡ Déployer des systèmes en production avec Docker, Kubernetes, Jenkins, GitHub Actions, AWS et CI/CD"
     ),
     emoji(
-      "⚡ Développer des applications full-stack et mobiles avec React, Next.js, Flutter et des intégrations IA"
+      "⚡ Développer des applications full-stack et mobiles avec Angular, Flutter, React, Next.js et des intégrations IA"
     )
   ],
   softwareSkills,
@@ -53,12 +53,11 @@ const educationInfo = {
     {
       schoolName: "EMSI — École Marocaine des Sciences de l'Ingénieur",
       logo: assets.emsiLogo,
-      subHeader:
-        "Diplôme d'Ingénieur d'État en Développement Digital et Systèmes d'Information (Bac+5)",
+      subHeader: "Diplôme d'Ingénieur d'État — Génie Logiciel (Bac+5)",
       duration: "Octobre 2022 - Octobre 2027",
-      desc: "Étudiant en dernière année spécialisé en développement full-stack, systèmes distribués et applications IA.",
+      desc: "Étudiant en dernière année spécialisé en backend, DevOps, CI/CD et systèmes full-stack scalables.",
       descBullets: [
-        "Domaines : Développement Backend, DevOps, CI/CD et conception de systèmes scalables",
+        "Domaines : Développement Backend, DevOps, CI/CD et conception de systèmes distribués",
         "Lauréat : 1er Prix EMSIstes INNOV'26 (projet Parkingo)"
       ]
     }
@@ -70,7 +69,7 @@ const parkingoAwardSection = {
   title: emoji("1er Prix — EMSIstes INNOV'26 🏆"),
   subtitle: "PARKINGO — PLATEFORME INTELLIGENTE DE GESTION DE PARKING",
   description:
-    "1er prix au concours d'innovation EMSIstes INNOV'26 à Marrakech pour Parkingo — une plateforme full-stack de parking intelligent avec Spring Boot, Flutter, Next.js, Gemini AI, WebRTC, visualisation 3D Three.js et reconnaissance de plaques OCR/ALPR.",
+    "1er prix au concours d'innovation EMSIstes INNOV'26 à Marrakech pour Parkingo — une plateforme full-stack de parking intelligent avec Spring Boot, Flutter, Next.js, MySQL, Gemini AI, Mapbox, OCR de plaques et jumeau 3D du parking.",
   image: assets.parkingoAward,
   imageAlt: "Prix Parkingo — 1er place EMSIstes INNOV'26",
   footerLink: [
@@ -93,32 +92,37 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Stagiaire Ingénieur Logiciel — Full-Stack & Odoo ERP",
-      company: "AMANUS - Agence digitale & Odoo",
+      role: "Stagiaire Ingénieur Logiciel — Systèmes ERP (Odoo 17)",
+      company: "AMANUS – Solutions Métiers & Transformation Digitale",
+      companyBanner: "AMANUS",
+      companyTagline: "Agence digitale & Odoo",
       companylogo: assets.amanusLogo,
-      desc: "Deux livrables principaux : KickPro (plateforme IA de talents football) et un module Odoo 17 ERP sur mesure pour la gestion de restaurant.",
+      date: "Juin 2026 – Septembre 2026",
+      desc: "Stage sur site axé sur des modules Odoo 17 ERP pour la restauration (Ventes, Stock, Achats).",
       descBullets: [
-        "KickPro : backend Spring Boot 3 (127+ endpoints REST), app Flutter multi-rôles, Kafka, Gemini AI, déploiement AWS",
-        "Restaurant Menu : module Odoo 17 intégré Ventes/Stock/Achats, rapports PDF QWeb, API JSON",
-        "DevOps : Docker Compose, CI/CD GitHub Actions, PostgreSQL, Redis"
+        "Contribution au développement de modules Odoo 17 en Python pour les workflows ERP restaurant",
+        "Création et modification de plus de 10 vues XML et ajout de champs personnalisés via l'ORM Odoo",
+        "Correction d'environ 20 tickets et tests des fonctionnalités dans un environnement Docker",
+        "Collaboration avec une équipe de 5 développeurs via Git et GitHub"
       ]
     },
     {
       role: "Stagiaire Ingénieur Logiciel",
       company: "Sofitel Marrakech",
       companylogo: assets.sofitelLogo,
-      desc: "Conception d'une application web Lost & Found full-stack pour digitaliser la gestion des objets trouvés et améliorer l'efficacité opérationnelle.",
+      date: "Juillet 2025 – Août 2025",
+      desc: "Conception de Hotel Asset Recovery, une plateforme d'objets trouvés qui a digitalisé le process papier de l'hôtel et réduit la recherche d'un objet de ~15–20 minutes à moins d'une minute.",
       descBullets: [
-        "Frontend React.js responsive et API REST Node.js/Express scalables avec MongoDB",
-        "Similarité d'images TensorFlow.js pour le rapprochement IA des objets",
-        "RBAC JWT, cache (~30% de gain de performance API), rate limiting et reverse proxy Nginx",
-        "Conteneurisation Docker ; tests avec Jest et Supertest"
+        "Backend Spring Boot modulaire (Spring Modulith) avec événements Kafka, sécurité Keycloak OAuth2/OIDC et stockage photos MinIO",
+        "Moteur de matching IA hybride (vision Ollama + embeddings texte, pgvector) combinant signaux visuels, sémantiques et de localisation",
+        "Stack : Java 21, Spring Boot 4, Spring Security, Spring Data JPA, Angular 21, PostgreSQL, Docker Compose, Prometheus, Grafana, Tempo"
       ]
     },
     {
       role: "Stagiaire Développeur Logiciel",
       company: "Eureka Digital",
       companylogo: assets.eurekaLogo,
+      date: "Juillet 2024 – Août 2024",
       desc: "Développement et maintenance d'applications web avec Python et Laravel en environnement Agile.",
       descBullets: [
         "APIs RESTful et services backend orientés performance et scalabilité",
@@ -137,7 +141,7 @@ const bigProjects = {
     {
       projectName: "KickPro — Plateforme IA de Découverte de Talents Football",
       projectDesc:
-        "Plateforme full-stack reliant joueurs marocains, scouts et agents. Spring Boot 3 (127+ endpoints), app Flutter (46 écrans), notifications Kafka, Coach IA Gemini, déploiement AWS.",
+        "Plateforme Flutter + Spring Boot (46 écrans, 127 APIs REST sécurisées, JWT/RBAC) reliant joueurs marocains et recruteurs. Verrouillage pessimiste pour les réservations, Kafka, chat WebSocket, coach IA Gemini, Docker/AWS (EC2/RDS), 32 tests JUnit.",
       footerLink: [
         {name: "Démo en ligne", url: projectLinks.kickpro.demo},
         {name: "GitHub", url: projectLinks.kickpro.github}
@@ -146,7 +150,7 @@ const bigProjects = {
     {
       projectName: "Parkingo — Plateforme de Parking Intelligent 🏆",
       projectDesc:
-        "1er Prix — EMSIstes INNOV'26. API Spring Boot, app mobile Flutter, dashboards Next.js, assistant Gemini AI, chat WebRTC, visualisation 3D Three.js, module OCR/ALPR.",
+        "1er Prix — EMSIstes INNOV'26. Parking intelligent de bout en bout (Spring Boot, Next.js, Flutter, MySQL) avec JWT, paiements wallet, réservation conversationnelle Gemini, OCR de plaques, QR, cartes Mapbox et jumeau 3D.",
       footerLink: [{name: "GitHub", url: projectLinks.parkingo.github}]
     },
     {
@@ -207,7 +211,7 @@ const achievementSection = {
       featured: true
     },
     {
-      title: "Software Engineering: Software Design and Project Management",
+      title: "Software Design & Project Management",
       issuer: "The Hong Kong University of Science and Technology",
       date: "Avr. 2025",
       skills: "UML, Design Patterns",
@@ -293,7 +297,7 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Me contacter ☎️"),
   subtitle:
-    "Ouvert aux stages, collaborations et opportunités backend/DevOps. Échangeons !",
+    "Ouvert aux stages PFE 2027, collaborations et opportunités backend/DevOps. Échangeons !",
   number: "+212 616161578",
   email_address: "hamza.2simou@gmail.com"
 };

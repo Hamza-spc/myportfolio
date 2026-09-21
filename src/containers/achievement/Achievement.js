@@ -5,11 +5,12 @@ import {usePortfolio} from "../../hooks/usePortfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
-function renderCard(card, isDark, key) {
+function renderCard(card, isDark, labels, key) {
   return (
     <AchievementCard
       key={key}
       isDark={isDark}
+      labels={labels}
       cardInfo={{
         title: card.title,
         issuer: card.issuer,
@@ -65,12 +66,16 @@ export default function Achievement() {
           </div>
 
           <div className="achievement-cards-div achievement-cards-featured">
-            {featuredCards.map((card, i) => renderCard(card, isDark, `featured-${i}`))}
+            {featuredCards.map((card, i) =>
+              renderCard(card, isDark, ui.achievement, `featured-${i}`)
+            )}
           </div>
 
           {showAll && (
             <div className="achievement-cards-div achievement-cards-expanded">
-              {otherCards.map((card, i) => renderCard(card, isDark, `other-${i}`))}
+              {otherCards.map((card, i) =>
+                renderCard(card, isDark, ui.achievement, `other-${i}`)
+              )}
             </div>
           )}
 

@@ -15,10 +15,15 @@
 
 .cert-title {
   color: #55198b;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.4;
   font-weight: 700;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.75rem;
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .cert-issuer {
@@ -71,26 +76,37 @@
 .certificate-card {
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  padding: 1.5rem;
+  padding: 1.35rem 1.15rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  height: 100%;
+  min-height: 190px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  -webkit-transition: box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 .certificate-card-no-image {
   .certificate-detail-div {
     margin-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
   }
 }
 .certificate-detail-div {
   text-align: center;
 }
 .certificate-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: $lightBoxShadowDark 0px 12px 24px -12px;
 }
 .dark-mode.certificate-card:hover {
-  box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
+  box-shadow: $achievementCertificateCardHoverDark 0px 12px 24px -12px;
 }
 .certificate-image-div {
   position: relative;
@@ -99,11 +115,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.achievement-cards-div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem 1rem;
 }
 .certificate-card-footer {
   display: flex;

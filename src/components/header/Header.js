@@ -73,7 +73,7 @@ function Header() {
           {navItems.map(
             item =>
               item.show && (
-                <li key={item.label}>
+                <li key={item.label} className="menu-item">
                   <a
                     href={item.href}
                     {...(item.isDownload
@@ -85,17 +85,11 @@ function Header() {
                 </li>
               )
           )}
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <LanguageToggle />
-            </a>
+          <li className="menu-item header-controls">
+            <LanguageToggle />
           </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
+          <li className="menu-item header-controls">
+            <ToggleSwitch />
           </li>
         </ul>
       </header>

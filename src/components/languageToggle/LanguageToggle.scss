@@ -54,4 +54,9 @@
   background-color: $buttonColor;
   border-color: $buttonColor;
   color: $textColorDark;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+.dark-menu .language-toggle-btn:not(.language-toggle-btn-active) {
+  opacity: 0.75;
 }

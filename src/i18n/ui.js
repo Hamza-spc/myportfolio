@@ -18,7 +18,9 @@ export const ui = {
     },
     achievement: {
       showLess: "Show less",
-      viewAll: count => `View all ${count} certifications`
+      viewAll: count => `View all ${count} certifications`,
+      issued: "Issued",
+      skills: "Skills"
     },
     projectLinks: {
       liveDemo: "Live Demo",
@@ -30,12 +32,12 @@ export const ui = {
       backend: "Backend",
       frontend: "Frontend",
       databases: "Databases",
-      devops: "DevOps & CI/CD",
+      devops: "DevOps & Cloud",
+      security: "Security",
       tools: "Tools",
-      networking: "Networking",
-      concepts: "Concepts"
+      concepts: "Methodologies"
     },
-    resumeDownloadName: "Hamza_Simou_CV_EN.pdf",
+    resumeDownloadName: "Hamza_Simou_CV.pdf",
     sectionHeadings: {
       education: "Education",
       experience: "Experiences",
@@ -45,7 +47,7 @@ export const ui = {
   fr: {
     nav: {
       home: "Accueil",
-      whatIDo: "Ce que je fais",
+      whatIDo: "Expertise",
       award: "Prix",
       skills: "Compétences",
       education: "Formation",
@@ -61,7 +63,9 @@ export const ui = {
     },
     achievement: {
       showLess: "Voir moins",
-      viewAll: count => `Voir les ${count} certifications`
+      viewAll: count => `Voir les ${count} certifications`,
+      issued: "Délivré",
+      skills: "Compétences"
     },
     projectLinks: {
       liveDemo: "Démo en ligne",
@@ -73,10 +77,10 @@ export const ui = {
       backend: "Backend",
       frontend: "Frontend",
       databases: "Bases de données",
-      devops: "DevOps & CI/CD",
+      devops: "DevOps & Cloud",
+      security: "Sécurité",
       tools: "Outils",
-      networking: "Réseaux",
-      concepts: "Concepts"
+      concepts: "Méthodologies"
     },
     resumeDownloadName: "Hamza_Simou_CV_FR.pdf",
     sectionHeadings: {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./AchievementCard.scss";
 
-export default function AchievementCard({cardInfo, isDark}) {
+export default function AchievementCard({cardInfo, isDark, labels = {}}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
@@ -34,29 +34,35 @@ export default function AchievementCard({cardInfo, isDark}) {
           <p className="cert-issuer">{cardInfo.issuer}</p>
         ) : null}
         {cardInfo.date ? (
-          <p className="cert-date">Issued {cardInfo.date}</p>
+          <p className="cert-date">
+            {labels.issued || "Issued"} {cardInfo.date}
+          </p>
         ) : cardInfo.description ? (
           <p className="card-subtitle">{cardInfo.description}</p>
         ) : null}
         {cardInfo.skills ? (
-          <p className="cert-skills">Skills: {cardInfo.skills}</p>
+          <p className="cert-skills">
+            {labels.skills || "Skills"}: {cardInfo.skills}
+          </p>
         ) : null}
       </div>
-      <div className="certificate-card-footer">
-        {cardInfo.footer.map((v, i) => {
-          return (
-            <span
-              key={i}
-              className={
-                isDark ? "dark-mode certificate-tag" : "certificate-tag"
-              }
-              onClick={() => openUrlInNewTab(v.url, v.name)}
-            >
-              {v.name}
-            </span>
-          );
-        })}
-      </div>
+      {cardInfo.footer?.length > 0 ? (
+        <div className="certificate-card-footer">
+          {cardInfo.footer.map((v, i) => {
+            return (
+              <span
+                key={i}
+                className={
+                  isDark ? "dark-mode certificate-tag" : "certificate-tag"
+                }
+                onClick={() => openUrlInNewTab(v.url, v.name)}
+              >
+                {v.name}
+              </span>
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   );
 }

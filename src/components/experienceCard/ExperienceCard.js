@@ -35,7 +35,16 @@ export default function ExperienceCard({cardInfo, isDark}) {
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <div className="experience-company-text">
+            <span className="experience-company-name">
+              {cardInfo.companyBanner || cardInfo.company}
+            </span>
+            {cardInfo.companyTagline ? (
+              <span className="experience-company-tagline">
+                {cardInfo.companyTagline}
+              </span>
+            ) : null}
+          </div>
         </div>
 
         <img
