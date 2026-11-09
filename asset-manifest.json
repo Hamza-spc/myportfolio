@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/myportfolio/static/css/main.49203f75.css",
-    "main.js": "/myportfolio/static/js/main.a47888a0.js",
+    "main.js": "/myportfolio/static/js/main.c23aec67.js",
     "static/css/64.73576579.chunk.css": "/myportfolio/static/css/64.73576579.chunk.css",
     "static/js/64.00e7f1b4.chunk.js": "/myportfolio/static/js/64.00e7f1b4.chunk.js",
     "static/css/769.bd463955.chunk.css": "/myportfolio/static/css/769.bd463955.chunk.css",
     "static/js/769.ce4e0bbc.chunk.js": "/myportfolio/static/js/769.ce4e0bbc.chunk.js",
-    "static/media/myphoto.png": "/myportfolio/static/media/myphoto.6b86ecf5faa4288d4a8b.png",
+    "static/media/myphoto.png": "/myportfolio/static/media/myphoto.1d575e9a6eb03e9b3cd5.png",
     "static/media/Montserrat-Regular.ttf": "/myportfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/resume-fr.pdf": "/myportfolio/static/media/resume-fr.319bb0a320b135d7bc61.pdf",
     "static/media/resume-en.pdf": "/myportfolio/static/media/resume-en.4102028f1edc7f18d710.pdf",
@@ -21,7 +21,7 @@
     "index.html": "/myportfolio/index.html",
     "static/media/talksCardBack.svg": "/myportfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.49203f75.css.map": "/myportfolio/static/css/main.49203f75.css.map",
-    "main.a47888a0.js.map": "/myportfolio/static/js/main.a47888a0.js.map",
+    "main.c23aec67.js.map": "/myportfolio/static/js/main.c23aec67.js.map",
     "64.73576579.chunk.css.map": "/myportfolio/static/css/64.73576579.chunk.css.map",
     "64.00e7f1b4.chunk.js.map": "/myportfolio/static/js/64.00e7f1b4.chunk.js.map",
     "769.bd463955.chunk.css.map": "/myportfolio/static/css/769.bd463955.chunk.css.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.49203f75.css",
-    "static/js/main.a47888a0.js"
+    "static/js/main.c23aec67.js"
   ]
 }
